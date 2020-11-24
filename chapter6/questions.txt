@@ -1,0 +1,55 @@
+1. Use Big O notation to describe the efficiency of an
+algorithm that takes 3 * N ** 2 + 2 * N + 1 steps.
+
+O(N**2)
+
+2. Use Big O notation to describe the efficiency of an algorithm that takes N  + log(N) steps.
+
+O(N)
+
+3. The following function checks whether an array of numbers contains a pair of two numbers that adds two add up to 10.
+
+function twoSum(array) {
+for (let i = 0; i < array.length; i++) {
+	for (let j = 0; j < array.length; j++) {
+		if (i !== j && array[i] + array[j] === 10) {
+			return true;
+			}
+		}
+	}
+	return false;
+}
+
+What are the best, average, and worst-case scenarios? Then, express the worst-case scenario in terms of Big O notation.
+
+O(1) in the best case
+O(N**2) in the average case
+O(N**2) in the worst case
+
+4. The following function returns whether or not a capital "X" is present without a string.
+
+function containsX(string) {
+	foundX = false;
+	for(let i = 0; i < string.length; i++) {
+		if (string[i] === "X") {
+			foundX = true;
+		}
+	}
+	return foundX;
+}
+
+What is this function's time complexity in terms of Big O notation?
+
+O(N)
+
+Then, modify the code to improve the algorithms's efficiency for best and average-case scenarios.
+
+function containsX(string) {
+	foundX = false;
+	for(let i = 0; i < string.length; i++) {
+		if (string[i] === "X") {
+			return true;
+		}
+	}
+	return false;
+}
