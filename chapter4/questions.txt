@@ -1,0 +1,40 @@
+1. Replace the question marks in the following table to describe how many steps occur for a given number of data eleemtns across various types of Big O:
+
+N elements		O(N)		O(log(N))	O(N**2)
+100			100		7		10000		
+2000			2000		11		4000000
+
+
+2. If we have an O(n**2) algorithm that processes an array and find that it takes 256 steps, what is the size of the array?
+
+sqrt(256) = 16
+
+3. Use Big O notation to describe the time complexity of the following function. It finds the greatest product of any pair of two numbers within a given array:
+
+def greatestProduct(array):
+	greatestProductSoFar = array[0] * array[1]
+	for i, ival in enumerate(array):
+		for j, jval in enumerate(array):
+			if i != j and ival * jval > greatestProductSoFar:
+		greatestProductSoFar = ival * jval
+	return greatestProductSoFar
+
+The algorithm runs in O(N**2)
+
+4. The following function finds the greatest single number within an array, but has an effeciency of O(N**2). Rewrite the function so that it becomes a speedy O(N).
+
+def greatestNumber(array):
+	for i in array:
+		isIValTheGreatest = True
+
+		for j in array:
+			if j > i:
+				isIValTheGreatest = False
+		if isIValTheGreatest:
+			return i
+
+
+O(N)
+
+def greatestNumber(array):
+	return min(array)
