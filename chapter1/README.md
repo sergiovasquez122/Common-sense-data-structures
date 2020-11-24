@@ -1,17 +1,17 @@
 1. For an array containing 100 elements, provide the number of steps the following operations would take:
-	a. Reading 
+	a. Reading
 	b. Searching for a value not contained within the array
 	c. Insertion at the beginning of the array
 	d. Insertion at the end of the array
 	e. Deletion at the beginning of the array
 	f. Deletion at the end of the array
 
-a. 1 operation is needed.
-b. 100 operations are needed. In general N operations are need for this operation.
-c. 100 + 1 = 101 operation is needed. In general N + 1 operations are needed.
-d. 1 operation is needed.
-e. 100 operations are needed. In general N operations are needed.
-f. 1 operation is needed
+a. 1 operation is needed.  
+b. 100 operations are needed. In general N operations are need for this operation.  
+c. 100 + 1 = 101 operation is needed. In general N + 1 operations are needed.  
+d. 1 operation is needed.  
+e. 100 operations are needed. In general N operations are needed.  
+f. 1 operation is needed  
 
 2. For an array-based set containing 100 elements, provide the number of steps the following operations would take:
 	a. Reading
