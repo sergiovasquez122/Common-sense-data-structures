@@ -8,6 +8,6 @@ Three scans after done before the 4th scan retrieves the necessary element. Thus
 
 3. What is the maximum number of steps it would take to perform a binary search on array of size 100,000
 
-floor(log(100000)) + 1 = 12
+floor(log2(100000)) + 1 = 17
 
-in total, 12 steps are needed.
+in total, 17 steps are needed.
