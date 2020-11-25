@@ -4,7 +4,7 @@ I would use a queue.
 
 2. If you pushed numbers onto a stack in the following order: 1, 2, 3, 4, 5, 6, and then popped two items, which number would you be able to read from the stack?
 
-last in first out so 6 would be the first element to be read.
+last in first out so 4 would be the element to be read.
 
 3. If you inserted numbers into a queue in the following order: 1, 2, 3, 4, 5, 6, and then dequeued two items, which number would you be able to read from the queue?
 
