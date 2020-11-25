@@ -1,0 +1,23 @@
+1. If you were writing software for a call center that places callers on hold and then assigns them to 'the next available representative,' would you use a stack or a queue?
+
+I would use a queue.
+
+2. If you pushed numbers onto a stack in the following order: 1, 2, 3, 4, 5, 6, and then popped two items, which number would you be able to read from the stack?
+
+last in first out so 6 would be the first element to be read.
+
+3. If you inserted numbers into a queue in the following order: 1, 2, 3, 4, 5, 6, and then dequeued two items, which number would you be able to read from the queue?
+
+first in first out, so 3 would be the answer.
+
+4. Write a function that uses a stack to reverse a string, you can work with our earlier implementation of the Stack class.
+
+def reverse_string(A):
+	l = []
+	for c in A:
+		l.append(c)
+	result = ""
+	while len(l) != 0:
+		result += l.pop()
+	return result
+
