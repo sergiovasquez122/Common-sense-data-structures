@@ -1,0 +1,13 @@
+1. Imagine you were to take an empty  binary search tree
+and insert the following sequence of numbers in this order :[1, 5, 9, 2, 4, 10, 6, 3, 8] 
+
+		1
+		 \ 
+		  5
+		 |  \ 
+	         2   9
+		  \  /  \
+	           4 6   10
+		  /   \
+		 3     8
+
