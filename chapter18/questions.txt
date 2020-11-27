@@ -1,0 +1,76 @@
+1. the first grpah on page 385 powers an e-commerce store's recommendation engine. Each vertex represents a product available on the store's website. The edges connect each product to other 'similar' products the site will recommend to the user when browsing a particular item.
+
+If the user is browsing 'nails', what other products will be recommended to the user?
+
+['hammer', 'pins', 'needles', 'nail polish']
+
+2. If we perform depth-first search on the second graph on page 385 starting with 'A' vertex, what is the order in which we'lll traverse all the vertices? Assume that when given the choice to visit multiple adjacent vertices, we'll first  visit the node that is earliest in the alphabet.
+
+['A', 'B', 'E', 'J', 'F', 'O', 'C', 'G', 'K','D', 'H', 'L','M', 'I', 'N', 'N', 'P']
+
+3. If we perform breadth-first search on the previous page starting with the 'A' vertex, what is the order in which we'll traverse all the vertices? Assume that when given the choice to visit multiple adjacent vertices, we'll first visit the node that is earliest in the alphabet.
+
+
+['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P']
+
+
+4. In this chapter, I only provided the code for breadth-first traversal, as discussed in Breadth-first search, on page 348. That is, the code simply printed the value of each vertex. Modify the code so that it performs an actual search for a vertex value provided to the function. That is, if the function finds the vertex it's searching for, it should return that vertex's value. Otherwise, it should return null.
+
+from collections import deque
+
+def search(G, s, v):
+    parent_pointers = {s : None}
+    q = deque()
+    q.append(s)
+    while len(q) != 0:
+        curr = q.popleft()
+        for w in G[curr]:
+            if w not in parent_pointers:
+                parent_pointers[w] = curr
+                q.append(w)
+    result = []
+    if v in parent_pointers:
+        iterator = v
+        while iterator is not None:
+            result.append(iterator)
+            iterator = parent_pointers[iterator]
+    return result[::-1] if len(result) != None else None
+	
+
+5. In Dijkstra's Algorithm, on page 367, we saw how Dijkstra's algorithm helped us find the shortest path within a weighed graph. However, the concept of a shortest path exists within an unweighted graph as well, how?
+
+The shortest path in a classic unweighted graph is the path that takes the fewest number of vertices to get from one vertex to another.
+
+This can be especially useful in social networking applications. Take the example network that follows:
+
+If we want to know how Idris is to connected Lina, we’d see that she’s
+connected to her from two different directions. That is, Idris is a second-
+degree connection to Lina through Kamil, but she is also a fifth-degree
+connection through Talia. Now, we’re probably interested in how closely
+Idris is connected to Lina, so the fact that she’s a fifth-degree connection
+is unimportant given that they’re also second-degree connections.
+Write a function that accepts two vertices from a graph and returns the
+shortest path between them. The function should return an array contain-
+ing the precise path, such as ["Idris", "Kamil", "Lina"] .
+Hint: The algorithm may contain elements of both breadth-first search
+and Dijkstra’s algorithm.
+
+from collections import deque
+
+def search(G, s, v):
+    parent_pointers = {s : None}
+    q = deque()
+    q.append(s)
+    while len(q) != 0:
+        curr = q.popleft()
+        for w in G[curr]:
+            if w not in parent_pointers:
+                parent_pointers[w] = curr
+                q.append(w)
+    result = []
+    if v in parent_pointers:
+        iterator = v
+        while iterator is not None:
+            result.append(iterator)
+            iterator = parent_pointers[iterator]
+    return result[::-1]
