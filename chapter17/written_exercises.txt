@@ -1,0 +1,23 @@
+1. List all the words stored in the following trie:
+
+tag, tan, tank, today, total, we, well, went
+
+2. Draw a trie that stores the following words: 'get', 'go', 'got', 'gotten', 'hall', 'ham', 'hammer', 'hill' and 'zebra'
+
+	h,g,z
+	|  |\ \
+	a  e o \
+	|\  | |  \
+	lm  t t,* \
+	||  | |    \
+	lm,** *,t   e
+	||  |       |
+	*e  t       b
+	 |  |       |
+	 r  e       r
+         |  |       |
+         *  n       a
+            |       | 
+            *       *
+
+
